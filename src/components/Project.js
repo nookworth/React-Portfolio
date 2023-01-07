@@ -1,5 +1,5 @@
 import React from "react";
-import { Github } from "@icons-pack/react-simple-icons";
+// import { Github } from "@icons-pack/react-simple-icons";
 
 const styles = {
   body: {
@@ -69,7 +69,8 @@ export default function Project({ title, text, image, link, github }) {
       <div className="card-body">
         <p className="card-text">{text}</p>
         <a href={github} className="btn" style={styles.button}>
-          <Github />
+          {/* <Github /> */}
+          Github
         </a>
       </div>
     </div>
