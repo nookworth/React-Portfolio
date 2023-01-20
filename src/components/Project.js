@@ -52,7 +52,7 @@ export default function Project({ title, text, image, link, github }) {
   }
 
   return (
-    <div className="card col-sm-4 col-lg-3 flex-sm-grow-1 m-2" style={styles.body}>
+    <div className="card col-sm-4 col-xl-3 flex-sm-grow-1 m-2" style={styles.body}>
       <p className="card-title" style={styles.title}>
         {title}
       </p>
