@@ -43,7 +43,6 @@ const styles = {
 // }
 
 export default function Project({ title, text, image, link, github }) {
-
   function onMouseEnter(e) {
     e.target.style.boxShadow = "2px 2px 2px #34312D";
   }
@@ -53,7 +52,7 @@ export default function Project({ title, text, image, link, github }) {
   }
 
   return (
-    <div className="card col-sm-4 flex-sm-grow-1 m-2" style={styles.body}>
+    <div className="card col-sm-4 col-lg-3 flex-sm-grow-1 m-2" style={styles.body}>
       <p className="card-title" style={styles.title}>
         {title}
       </p>
@@ -67,7 +66,12 @@ export default function Project({ title, text, image, link, github }) {
         ></img>
       </a>
       <div className="card-body">
-        <p className="card-text">{text}</p>
+        {/* loop through each value in the text object and create a bullet point for each */}
+        <ul>
+          {text &&
+            text.map((listItem, index) => <li key={index}>{listItem}</li>)}
+        </ul>
+        {/* <p className="card-text">{text}</p> */}
         <a href={github} className="btn" style={styles.button}>
           {/* <Github /> */}
           Github

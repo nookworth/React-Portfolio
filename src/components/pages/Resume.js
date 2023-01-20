@@ -105,7 +105,7 @@ export default function Resume() {
             style={styles.link}
           >
             <img
-              src="https://i.imgur.com/oXUa80F.jpg"
+              src="https://i.imgur.com/vIfTW6U.jpg"
               alt="resume"
               style={styles.image}
               onMouseEnter={onMouseEnter}
