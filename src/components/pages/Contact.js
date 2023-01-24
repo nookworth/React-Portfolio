@@ -35,6 +35,15 @@ export default function Contact() {
     setErrorMessage("");
   };
 
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   if (!validateEmail(email)) {
+  //     setErrorMessage("Invalid email address");
+  //     return;
+  //   }
+  // };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -42,6 +51,23 @@ export default function Contact() {
       setErrorMessage("Invalid email address");
       return;
     }
+
+    if (!name || !email || !message) {
+      setErrorMessage("All three fields are required.");
+      return;
+    }
+
+    const createMessage = fetch("https://rocky-mountain-18491.herokuapp.com//api/messages", {
+      method: "POST",
+      mode: "same-origin",
+      body: {
+        messageText: message,
+        messageAuthor: name,
+        messageEmail: email
+      },
+    })
+
+    console.log(createMessage);
   };
 
   const handleClick = (e) => {
