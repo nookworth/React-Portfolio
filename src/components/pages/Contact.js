@@ -57,7 +57,7 @@ export default function Contact() {
       return;
     }
 
-    const createMessage = fetch("https://rocky-mountain-18491.herokuapp.com//api/messages", {
+    const createMessage = fetch("https://rocky-mountain-18491.herokuapp.com/api/messages", {
       method: "POST",
       mode: "same-origin",
       body: {
