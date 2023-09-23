@@ -75,7 +75,7 @@ function NavTabs({ currentPage, handlePageChange }) {
         
         </li>    
       </ul>     */}
-    <div className="d-none d-md-block" style={styles.text}>Christopher Morrison's Portfolio</div>
+    <div className="d-none d-md-block" style={styles.text}><h3>Christopher Morrison's Portfolio</h3></div>
     </div>
   );
 }

@@ -1,9 +1,13 @@
+#project-card-list {
+  list-style: none;
+}
+
 .nav-link:active {
   color: #f00c0c;
 }
 
 .nav-link {
-  color: #F1E3D3;
+  color: #f1e3d3;
 }
 
 .nav-item {

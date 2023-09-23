@@ -9,6 +9,13 @@ const styles = {
     background: "#34312D",
     color: "#F1E3D3",
   },
+  info: {
+    borderStyle: "solid",
+    borderWidth: "1px",
+    borderColor: "#34312D",
+    borderRadius: "5px",
+    background: "#F3F3F4",
+  },
 };
 
 export default function Contact() {
@@ -61,6 +68,7 @@ export default function Contact() {
   return (
     <div className="text-center d-flex flex-column align-items-center">
       <h2>Contact Me</h2>
+      <div style={styles.info}>You may email me at chrismorrison1987@gmail.com or use this contact form</div>
       <div className="container row justify-content-center">
         <form className="form-group">
           <input

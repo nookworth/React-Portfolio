@@ -8,20 +8,21 @@ import React from "react";
 const styles = {
   footer: {
     background: "#34312D",
-    color: "#F1E3D3",
+    color: "#F1E3D3"
   },
 };
 
 export default function Footer() {
   return (
     <div className="d-flex justify-content-end fixed-bottom" style={styles.footer}>
-      <a href="https://github.com/nookworth" style={styles.footer}>
+      <a href="https://github.com/nookworth" className="mx-2" style={styles.footer}>
         {/* <Github className="m-2" title="Github" size={24} /> */}
         Github
       </a>
 
       <a
         href="https://www.linkedin.com/in/chris-morrison-9a185a22/"
+        className="mx-2"
         style={styles.footer}
       >
         {/* <Linkedin className="m-2" /> */}
@@ -30,6 +31,7 @@ export default function Footer() {
 
       <a
         href="https://stackoverflow.com/users/19518053/nookworth"
+        className="mx-2"
         style={styles.footer}
       >
         {/* <Stackoverflow className="m-2" /> */}
