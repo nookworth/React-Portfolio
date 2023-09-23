@@ -27,8 +27,7 @@ const dndMeetups = {
   image: 'https://i.imgur.com/E3ycdtx.jpg',
   link: 'https://frozen-meadow-34344.herokuapp.com/',
   github: 'https://github.com/DandDMeetups/DnDMeetups',
-  subtitle:
-    'A social media platform of sorts for Dungeons and Dragons players.',
+  subtitle: 'A social media platform for Dungeons and Dragons players.',
 }
 
 const techBlog = {
@@ -69,23 +68,9 @@ const socialApi = {
 //   github: "https://github.com/nookworth/e-commerce-back-end",
 // };
 
-const styles = {
-  quickFlix: {
-    backgroundImage: 'https://i.imgur.com/nQ5y4Fq.jpg',
-  },
-
-  project: {
-    background: '#F1E3D3',
-  },
-
-  text: {
-    text: '#F3F3F4',
-  },
-}
-
 export default function Portfolio() {
   return (
-    <div className='row mx-3 text-center'>
+    <div className='portfolio-container row mx-3 text-center'>
       <h2>My Work</h2>
       <Project
         title={tapp.title}

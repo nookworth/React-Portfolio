@@ -58,6 +58,7 @@ export default function Project({
     e.target.style.boxShadow = ''
   }
 
+  // TODO: refactor using TailwindCSS
   return (
     <div
       className='card col-sm-4 col-xl-3 flex-sm-grow-1 m-2'
@@ -76,17 +77,17 @@ export default function Project({
           onMouseLeave={onMouseLeave}
         ></img>
       </a>
-      <div className='card-body d-flex flex-column justify-content-evenly'>
-        <ul id='project-card-list'>
+      <div className='card-text'>
+        <ul className='text-center' id='project-card-list'>
           {text &&
             text.map((listItem, index) => <li key={index}>{listItem}</li>)}
         </ul>
-        {github && (
-          <a href={github} className='btn float-bottom' style={styles.button}>
-            Github
-          </a>
-        )}
       </div>
+      {github && (
+        <a href={github} className='btn w-50 mx-auto' style={styles.button}>
+          Github
+        </a>
+      )}
     </div>
   )
 }

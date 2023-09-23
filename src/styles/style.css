@@ -21,3 +21,8 @@ a {
 .render-page {
   height: 100vh;
 }
+
+.portfolio-container {
+  display: flex;
+  flex-direction: row;
+}
