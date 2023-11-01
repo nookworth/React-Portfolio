@@ -1,9 +1,9 @@
 import React from "react";
-// import {
-//   Github,
-//   Linkedin,
-//   Stackoverflow,
-// } from "@icons-pack/react-simple-icons";
+import {
+  SiGithub,
+  SiLinkedin,
+  SiStackoverflow,
+} from '@icons-pack/react-simple-icons'
 
 const styles = {
   footer: {
@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <div className="d-flex justify-content-end fixed-bottom" style={styles.footer}>
       <a href="https://github.com/nookworth" className="mx-2" style={styles.footer}>
-        {/* <Github className="m-2" title="Github" size={24} /> */}
+        <SiGithub className="m-2" title="Github" size={24} />
         Github
       </a>
 
@@ -25,7 +25,7 @@ export default function Footer() {
         className="mx-2"
         style={styles.footer}
       >
-        {/* <Linkedin className="m-2" /> */}
+        <SiLinkedin className="m-2" />
         LinkedIn
       </a>
 
@@ -34,7 +34,7 @@ export default function Footer() {
         className="mx-2"
         style={styles.footer}
       >
-        {/* <Stackoverflow className="m-2" /> */}
+        <SiStackoverflow className="m-2" />
         StackOverflow
       </a>
     </div>

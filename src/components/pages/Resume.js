@@ -35,89 +35,95 @@ export default function Resume() {
   }
 
   return (
-    <div className="text-center d-flex flex-column align-items-middle">
+    <div className='text-center d-flex flex-column align-items-middle'>
       <div>
         <h2>Resume and Skills</h2>
       </div>
 
-      <div className="container row d-flex flex-row flex-wrap justify-content-center mx-2">
+      <div className='container row d-flex flex-row flex-wrap justify-content-center mx-2'>
         <div
-          className="col-sm py-3 px-md-5 m-2 flex-md-grow-1"
+          className='col-sm py-3 px-md-5 m-2 flex-md-grow-1'
           style={styles.list}
         >
           <h3>✨ Skills ✨</h3>
-          <ul className="list-group">
-            <li className="list-group-item" style={styles.listItem}>
+          <ul className='list-group'>
+            <li className='list-group-item' style={styles.listItem}>
               JavaScript ES6+
             </li>
-            <li className="list-group-item" style={styles.listItem}>
+            <li className='list-group-item' style={styles.listItem}>
               CSS3
             </li>
-            <li className="list-group-item" style={styles.listItem}>
+            <li className='list-group-item' style={styles.listItem}>
               HTML5
             </li>
-            <li className="list-group-item" style={styles.listItem}>
-              SQL
-            </li>
-            <li className="list-group-item" style={styles.listItem}>
-              NoSQL
-            </li>
-            <li className="list-group-item" style={styles.listItem}>
-              GitHub
-            </li>
-            <li className="list-group-item" style={styles.listItem}>
-              MongoDB
-            </li>
-            <li className="list-group-item" style={styles.listItem}>
-              MySQL
-            </li>
-            <li className="list-group-item" style={styles.listItem}>
-              Express
-            </li>
-            <li className="list-group-item" style={styles.listItem}>
+            <li className='list-group-item' style={styles.listItem}>
               React
             </li>
-            <li className="list-group-item" style={styles.listItem}>
-              Node
+            <li className='list-group-item' style={styles.listItem}>
+              Electron.js
             </li>
-            <li className="list-group-item" style={styles.listItem}>
-              Handlebars
+            <li className='list-group-item' style={styles.listItem}>
+              Elixir
             </li>
-            <li className="list-group-item" style={styles.listItem}>
-              jQuery
+            <li className='list-group-item' style={styles.listItem}>
+              SQL
             </li>
-            <li className="list-group-item" style={styles.listItem}>
-              Bootstrap
+            <li className='list-group-item' style={styles.listItem}>
+              MySQL
             </li>
-            <li className="list-group-item" style={styles.listItem}>
+            <li className='list-group-item' style={styles.listItem}>
+              NoSQL
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
+              MongoDB
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
+              Git
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
+              AWS Amplify
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
+              Express.js
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
+              Node.js
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
               Tailwind
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
+              UnoCSS
+            </li>
+            <li className='list-group-item' style={styles.listItem}>
+              Bootstrap
             </li>
           </ul>
         </div>
         <div
-          className="col-sm py-3 px-md-5 m-2 flex-md-grow-1"
+          className='col-sm py-3 px-md-5 m-2 flex-md-grow-1'
           style={styles.list}
         >
           <h3>📜 Resume 📜</h3>
           <a
-            className="my-5 flex-shrink-1"
-            href="https://docs.google.com/document/d/1KO9zwd_FVnY-rfrOgWMKi0uNbsyP7JqsMc2SlrTXFwY/edit?usp=sharing"
+            className='my-5 flex-shrink-1'
+            href='https://docs.google.com/document/d/1vKlLrSG0O4KcRfLCStWNfJQnsm8XUyT8pVf2z8K7oEg/edit?usp=sharing'
             style={styles.link}
           >
             <img
-              src="https://i.imgur.com/vIfTW6U.jpg"
-              alt="resume"
+              src='https://i.imgur.com/UxqGUXI.png'
+              alt='resume'
               style={styles.image}
               onMouseEnter={onMouseEnter}
               onMouseLeave={onMouseLeave}
-              data-toggle="tooltip"
-              data-placement="top"
-              title="Download/view resume"
-              className="flex-shrink-1"
+              data-toggle='tooltip'
+              data-placement='top'
+              title='Download/view resume'
+              className='flex-shrink-1'
             ></img>
           </a>
         </div>
       </div>
     </div>
-  );
+  )
 }
