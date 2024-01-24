@@ -1,9 +1,32 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+const fullName = 'Christopher H. Morrison'
+const education = [
+  ['University of Utah', 'Certificate, Full-stack Web Development'],
+  ['Brigham Young University', 'MM, Piano Performance'],
+  ['Brigham Young University', 'BM, Piano Performance'],
+]
+const experience = [
+  ['Travelpass Group', 'Engineering Intern'],
+  ['Utah Valley University', 'TypeWell Transcriber'],
+  ['Morrison Piano Studio', 'Owner/Teacher'],
+]
+const interests = [
+  'Self-teaching',
+  'Self-driven projects',
+  'Learning programming languages',
+  'Web fundamentals',
+]
+const hobbies = [
+  'Music composition',
+  'Piano',
+  'Tabletop role-playing games',
+  'Nonfiction',
+  'Video games',
+]
 
 export const AboutModal = ({ onClose }) => {
   return (
     <div
-      className='bg-manila-dark fixed bottom-0 text-white rounded-lg shadow-lg space-y-4 px-4'
+      className='bg-manila-dark fixed bottom-0 w-full md:w-2/3 text-white rounded-lg shadow-lg space-y-4 px-4 overflow-scroll overscroll-contain'
       id='about-modal'
     >
       <section className='flex flex-row justify-center'>
@@ -17,47 +40,50 @@ export const AboutModal = ({ onClose }) => {
       </section>
       <section className='grid grid-cols-2 space-y-2'>
         <h3 className='text-xl'>Name: </h3>
-        <p>Christopher H. Morrison</p>
+        <p data-section='0'>{fullName}</p>
         <hr></hr>
         <hr></hr>
         <h3 className='text-xl'>Education: </h3>
-        <div className='flex flex-col'>
-          <p>University of Utah</p>
-          <p className='ml-8 italic'>Certificate, Full-stack Web Development</p>
-          <p>Brigham Young University</p>
-          <p className='ml-8 italic'>MM, Piano Performance</p>
-          <p>Brigham Young University</p>
-          <p className='ml-8 italic'>BM, Piano Performance</p>
-        </div>
+        <ul className='flex flex-col' data-section='1'>
+          <li>University of Utah</li>
+          <li className='ml-8 italic'>
+            Certificate, Full-stack Web Development
+          </li>
+          <li>Brigham Young University</li>
+          <li className='ml-8 italic'>MM, Piano Performance</li>
+          <li>Brigham Young University</li>
+          <li className='ml-8 italic'>BM, Piano Performance</li>
+        </ul>
         <hr></hr>
         <hr></hr>
         <h3 className='text-xl'>Experience: </h3>
-        <div className='flex flex-col'>
-          <p>Travelpass Group</p>
-          <p className='ml-8 italic'>Engineering Intern</p>
-          <p>Utah Valley University</p>
-          <p className='ml-8 italic'>TypeWell Transcriber</p>
-          <p>Morrison Piano Studio</p>
-          <p className='ml-8 italic'>Owner/Teacher</p>
-        </div>
+        <ul className='flex flex-col' data-section='2'>
+          <li>Travelpass Group</li>
+          <li className='ml-8 italic'>Engineering Intern</li>
+          <li>Utah Valley University</li>
+          <li className='ml-8 italic'>TypeWell Transcriber</li>
+          <li>Morrison Piano Studio</li>
+          <li className='ml-8 italic'>Owner/Teacher</li>
+        </ul>
         <hr></hr>
         <hr></hr>
         <h3 className='text-xl'>Professional Interests: </h3>
-        <div className='flex flex-col'>
-          <p>Self-teaching</p>
-          <p>Self-driven projects</p>
-          <p>Learning new programming languages</p>
-          <p>Web fundamentals</p>
-        </div>
+        <ul>
+          <li>Self-teaching</li>
+          <li>Self-driven projects</li>
+          <li>Learning new programming languages</li>
+          <li>Web fundamentals</li>
+        </ul>
         <hr></hr>
         <hr></hr>
         <h3 className='text-xl'>Hobbies: </h3>
-        <div className='flex flex-col'>
-          <p>Music composition and piano</p>
-          <p>Tabletop role-playing games</p>
-          <p>Reading nonfiction</p>
-          <p>Video games</p>
-        </div>
+        <ul>
+          <li>Music composition</li>
+          <li>Piano</li>
+          <li>Tabletop role-playing games</li>
+          <li>Nonfiction</li>
+          <li>Video games</li>
+        </ul>
       </section>
     </div>
   )
