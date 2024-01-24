@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+#about-modal {
+  animation: slideIn 0.5s ease-out;
+  height: 800px;
+  width: 66%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 #project-card-list {
   list-style: none;
 }
@@ -29,4 +39,16 @@ a {
 .portfolio-container {
   display: flex;
   flex-direction: row;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50%) translateY(100%);
+    display: none;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0%);
+    display: block;
+  }
 }
