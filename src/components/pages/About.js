@@ -5,6 +5,7 @@ import {
   SiStackoverflow,
 } from '@icons-pack/react-simple-icons'
 import { AboutModal } from '../AboutModal'
+import Portfolio from './Portfolio'
 import './about.css'
 
 const styles = {
@@ -23,71 +24,58 @@ export default function About() {
   return (
     <>
       {isModalOpen && <AboutModal onClose={closeModal} />}
-      <div className='relative my-8'>
-        <div className='grid grid-rows-2 about-grid'>
-          <section className='flex flex-row headshot-bio'>
+      <div className='relative'>
+        <div className='grid grid-rows-4 mt-2 space-y-2 about-grid'>
+          <section className='flex flex-row items-center gap-2 px-2 max-h-[300px] row-span-1 relative group/bio headshot-bio'>
             <img
               src='https://i.imgur.com/G3gqAWn.jpg'
-              className='pro-headshot'
+              className='pro-headshot h-[300px]'
               alt='pro-headshot'
             />
             <div
-              className='text-xs pt-12 md:text-sm lg:text-base text-center space-y-4 cursor-pointer about-info'
+              className='text-sm lg:text-xl mx-auto text-center space-y-4 cursor-pointer about-info'
               style={styles.about}
               onClick={() => {
                 setIsModalOpen(true)
               }}
             >
-              <h2>About Me</h2>
-              <p>
-                I am a frontend/full-stack web developer. My background in music
-                has strengthened my self-teaching muscle and I continue to
-                exercise it in the programming world. I have strengths in
-                JavaScript, HTML, CSS, TailwindCSS, React, Electron, Node, and
-                Elixir, and I am currently studying Ruby in addition.
+              <h2 className='text-2xl lg:text-3xl text-charcoal group-hover/bio:hidden'>
+                Christopher Morrison<br></br>Software Engineer
+              </h2>
+              <p className='hidden text-charcoal group-hover/bio:block'>
+                I am a frontend software engineer with full-stack aspirations.
+                My background in music has strengthened my self-teaching muscle
+                and I continue to exercise it in the programming world. I am
+                skilled in JavaScript, HTML, CSS, TailwindCSS, React, Electron,
+                Node, and Elixir, and I am always interested in learning new
+                technologies.
               </p>
-              <h1>
+              <h1 className='hidden text-charcoal group-hover/bio:block'>
                 <em>click for detailed factsheet</em>
               </h1>
             </div>
           </section>
-          {/* <div
-            className='md:col-span-2 inline-flex flex-col justify-between my-2 text-center'
-            style={styles.about}
-          >
-            <h2>Socials</h2>
-            <div className='inline-flex justify-evenly mb-24'>
-              <a
-                href='https://github.com/nookworth'
-                rel='noreferrer'
-                target='_blank'
-              >
-                {' '}
-                <SiGithub color='default' />
-              </a>
-              <a
-                href='https://www.linkedin.com/in/chris-morrison-9a185a22/'
-                rel='noreferrer'
-                target='_blank'
-              >
-                <SiLinkedin color='default' />
-              </a>
-              <a
-                href='https://stackoverflow.com/users/19518053/nookworth'
-                rel='noreferrer'
-                target='_blank'
-              >
-                <SiStackoverflow color='default' />
-              </a>
-            </div>
-          </div> */}
-          <section className='bg-eggplant w-full'>
+          <section className='flex flex-col items-center row-span-1 max-h-[300px] p-2 lg:flex-row lg:justify-between bg-eggplant w-full'>
+            <header className='text-manila text-center text-2xl my-auto lg:hidden'>
+              Project Highlight: HexType
+            </header>
+            <header className='text-manila text-center mx-auto hidden justify-self-center lg:block lg:text-3xl'>
+              Project Highlight:<br></br>HexType
+            </header>
             <video
-              className='aspect-video ml-auto rounded-md max-h-[450px]'
+              className='rounded-md max-h-4/5 lg:max-h-full xl:max-h-[450]'
               controls
               src='https://i.imgur.com/JUIXKYy.mp4'
               // width='750'
             ></video>
+          </section>
+          <section className='bg-manila flex flex-row justify-center items-center max-h-[450px] row-span-2 p-2 text-charcoal lg:justify-evenly'>
+            <div className='w-4/5'>
+              <Portfolio />
+            </div>
+            <header className='text-xl hidden lg:block  lg:text-3xl'>
+              Project Showcase
+            </header>
           </section>
         </div>
       </div>

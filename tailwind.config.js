@@ -3,11 +3,17 @@ module.exports = {
   content: ['./src/**/*.js'],
   theme: {
     colors: {
+      'charcoal': '#4F4B45',
       coquelicot: '#FF4A1C',
       eggplant: '#684551',
+      'eggplant-light': '#875969',
+      'green-muted': '#45685C',
       manila: '#e7c9a9',
       'manila-dark': '#cba175',
+      'onyx': '#424242',
+      'papaya': '#F1E3D3',
       verdigris: '#75B9BE',
+      'verdigris-dark': '#52A7AE',
     },
     extend: {
       spacing: {
