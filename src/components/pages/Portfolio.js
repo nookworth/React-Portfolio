@@ -71,9 +71,10 @@ const otherThree = [techBlog, employeeTracker, socialApi]
 //   github: "https://github.com/nookworth/e-commerce-back-end",
 // };
 
+// TODO: allow this to take a 'layout' prop to determine whether to display a gallery or a card grid
 export default function Portfolio() {
   return (
-    <div className='flex flex-row gap-3 p-1.5 max-h-full max-w-full'>
+    <div className='flex flex-row gap-3 p-1.5'>
       <section className='grid grid-cols-5 grid-rows-2 gap-3 max-w-1/2'>
         {topThreeProjects.map(
           ({ title, text, image, link, github, subtitle }, index) => (

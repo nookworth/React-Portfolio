@@ -1,25 +1,15 @@
 import { useState } from 'react'
-import {
-  SiGithub,
-  SiLinkedin,
-  SiStackoverflow,
-} from '@icons-pack/react-simple-icons'
 import { AboutModal } from '../AboutModal'
 import Portfolio from './Portfolio'
 import './about.css'
-
-const styles = {
-  footer: {
-    background: '#34312D',
-    color: '#F1E3D3',
-  },
-}
 
 export default function About() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const closeModal = () => {
     setIsModalOpen(false)
   }
+
+  // TODO: make navigation tabs, make navbar responsive, fix project showcase scaling, fix Portfolio page, fix Resume page, take better screenshots for project gallery
 
   return (
     <>
@@ -34,7 +24,6 @@ export default function About() {
             />
             <div
               className='text-sm lg:text-xl mx-auto text-center space-y-4 cursor-pointer about-info'
-              style={styles.about}
               onClick={() => {
                 setIsModalOpen(true)
               }}
@@ -69,11 +58,14 @@ export default function About() {
               // width='750'
             ></video>
           </section>
-          <section className='bg-manila flex flex-row justify-center items-center max-h-[450px] row-span-2 p-2 text-charcoal lg:justify-evenly'>
-            <div className='w-4/5'>
+          <section className='bg-manila flex flex-col lg:flex-row justify-center max-h-[450px] row-span-2 p-2 text-charcoal lg:justify-between'>
+            <header className='text-center text-2xl m-auto lg:hidden'>
+              Project Showcase
+            </header>
+            <div className=' lg:h-full lg:w-4/5'>
               <Portfolio />
             </div>
-            <header className='text-xl hidden lg:block  lg:text-3xl'>
+            <header className='m-auto text-xl hidden lg:block lg:text-3xl'>
               Project Showcase
             </header>
           </section>

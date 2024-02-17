@@ -1,27 +1,4 @@
 const fullName = 'Christopher H. Morrison'
-const education = [
-  ['University of Utah', 'Certificate, Full-stack Web Development'],
-  ['Brigham Young University', 'MM, Piano Performance'],
-  ['Brigham Young University', 'BM, Piano Performance'],
-]
-const experience = [
-  ['Travelpass Group', 'Engineering Intern'],
-  ['Utah Valley University', 'TypeWell Transcriber'],
-  ['Morrison Piano Studio', 'Owner/Teacher'],
-]
-const interests = [
-  'Self-teaching',
-  'Self-driven projects',
-  'Learning programming languages',
-  'Web fundamentals',
-]
-const hobbies = [
-  'Music composition',
-  'Piano',
-  'Tabletop role-playing games',
-  'Nonfiction',
-  'Video games',
-]
 
 export const AboutModal = ({ onClose }) => {
   return (

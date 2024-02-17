@@ -59,7 +59,7 @@ export default function Project({
     e.target.style.boxShadow = ''
   }
 
-  // TODO: refactor using TailwindCSS
+  // TODO: based on 'layout' prop, render either just a background image or a card with text
   return (
     <div
       className='overflow-hidden h-full w-full flex flex-col card-body'
@@ -69,10 +69,15 @@ export default function Project({
         {title}
       </p>
       <em>{subtitle}</em> */}
-      <a className='h-full hover:shadow-lg' href={link} target='_blank' rel='noreferrer'>
+      <a
+        className='h-full hover:shadow-lg'
+        href={link}
+        target='_blank'
+        rel='noreferrer'
+      >
         <img
           src={image}
-          className='hover:opacity-40 h-full'
+          className='hover:opacity-40 h-full max-h-[450px]'
           alt='...'
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
