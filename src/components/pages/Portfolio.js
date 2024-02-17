@@ -60,6 +60,9 @@ const socialApi = {
   subtitle: 'Routes and data models for a hypothetical social network.',
 }
 
+const topThreeProjects = [tapp, quickFlix, dndMeetups]
+const otherThree = [techBlog, employeeTracker, socialApi]
+
 // const eCommerce = {
 //   title: "E-commerce Backend",
 //   text: ["A functional backend, including routes and database models."],
@@ -70,54 +73,91 @@ const socialApi = {
 
 export default function Portfolio() {
   return (
-    <div className='portfolio-container row mx-3 text-center'>
-      <h2>My Work</h2>
-      <Project
-        title={tapp.title}
-        text={tapp.text}
-        image={tapp.image}
-        link={tapp.link}
-        subtitle={tapp.subtitle}
-      />
-      <Project
-        title={quickFlix.title}
-        text={quickFlix.text}
-        image={quickFlix.image}
-        link={quickFlix.link}
-        github={quickFlix.github}
-        subtitle={quickFlix.subtitle}
-      />
-      <Project
-        title={dndMeetups.title}
-        text={dndMeetups.text}
-        image={dndMeetups.image}
-        link={dndMeetups.link}
-        github={dndMeetups.github}
-        subtitle={dndMeetups.subtitle}
-      />
-      <Project
-        title={techBlog.title}
-        text={techBlog.text}
-        image={techBlog.image}
-        github={techBlog.github}
-        subtitle={techBlog.subtitle}
-      />
-      <Project
-        title={employeeTracker.title}
-        text={employeeTracker.text}
-        image={employeeTracker.image}
-        link={employeeTracker.link}
-        github={employeeTracker.github}
-        subtitle={employeeTracker.subtitle}
-      />
-      <Project
-        title={socialApi.title}
-        text={socialApi.text}
-        image={socialApi.image}
-        link={socialApi.link}
-        github={socialApi.github}
-        subtitle={socialApi.subtitle}
-      />
+    // <div className='portfolio-container row mx-3 text-center'>
+    //   <h2>My Work</h2>
+    //   <Project
+    //     title={tapp.title}
+    //     text={tapp.text}
+    //     image={tapp.image}
+    //     link={tapp.link}
+    //     subtitle={tapp.subtitle}
+    //   />
+    //   <Project
+    //     title={quickFlix.title}
+    //     text={quickFlix.text}
+    //     image={quickFlix.image}
+    //     link={quickFlix.link}
+    //     github={quickFlix.github}
+    //     subtitle={quickFlix.subtitle}
+    //   />
+    //   <Project
+    //     title={dndMeetups.title}
+    //     text={dndMeetups.text}
+    //     image={dndMeetups.image}
+    //     link={dndMeetups.link}
+    //     github={dndMeetups.github}
+    //     subtitle={dndMeetups.subtitle}
+    //   />
+    //   <Project
+    //     title={techBlog.title}
+    //     text={techBlog.text}
+    //     image={techBlog.image}
+    //     github={techBlog.github}
+    //     subtitle={techBlog.subtitle}
+    //   />
+    //   <Project
+    //     title={employeeTracker.title}
+    //     text={employeeTracker.text}
+    //     image={employeeTracker.image}
+    //     link={employeeTracker.link}
+    //     github={employeeTracker.github}
+    //     subtitle={employeeTracker.subtitle}
+    //   />
+    //   <Project
+    //     title={socialApi.title}
+    //     text={socialApi.text}
+    //     image={socialApi.image}
+    //     link={socialApi.link}
+    //     github={socialApi.github}
+    //     subtitle={socialApi.subtitle}
+    //   />
+    // </div>
+    <div className='flex flex-row gap-3 h-116 p-1.5 max-w-full'>
+      <section className='grid grid-cols-5 grid-rows-2 gap-3 max-w-1/2'>
+        {topThreeProjects.map(
+          ({ title, text, image, link, github, subtitle }, index) => (
+            <div
+              key={index}
+              className='first:order-3 first:col-start-3 first:col-span-3 first:row-start-1 first:row-span-2 even:col-span-2 last:col-span-2'
+            >
+              <Project
+                title={title}
+                text={text}
+                image={image}
+                link={link}
+                github={github}
+                subtitle={subtitle}
+              />
+            </div>
+          )
+        )}
+      </section>
+      <section className='grid grid-cols-2 grid-rows-2 gap-3 max-w-1/2'>
+        {otherThree?.map(
+          ({ title, text, image, link, github, subtitle }, index) => (
+            <div key={index} className='first:col-span-2'>
+              <Project
+                title={title}
+                text={text}
+                image={image}
+                link={link}
+                github={github}
+                subtitle={subtitle}
+              />
+            </div>
+          )
+        )}
+      </section>
     </div>
   )
 }

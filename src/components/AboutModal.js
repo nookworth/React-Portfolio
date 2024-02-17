@@ -30,7 +30,7 @@ export const AboutModal = ({ onClose }) => {
       id='about-modal'
     >
       <section className='flex flex-row justify-center'>
-        <h2 className='mt-4 text-3xl underline'>Developer Factsheet</h2>
+        <h2 className='mt-4 text-xl md:text-3xl underline'>Developer Factsheet</h2>
         <button
           className='absolute right-2 top-1 hover:underline'
           onClick={() => onClose()}
@@ -39,11 +39,11 @@ export const AboutModal = ({ onClose }) => {
         </button>
       </section>
       <section className='grid grid-cols-2 space-y-2'>
-        <h3 className='text-xl'>Name: </h3>
+        <h3 className='text-base md:text-xl'>Name: </h3>
         <p data-section='0'>{fullName}</p>
         <hr></hr>
         <hr></hr>
-        <h3 className='text-xl'>Education: </h3>
+        <h3 className='text-base md:text-xl'>Education: </h3>
         <ul className='flex flex-col' data-section='1'>
           <li>University of Utah</li>
           <li className='ml-8 italic'>
@@ -56,7 +56,7 @@ export const AboutModal = ({ onClose }) => {
         </ul>
         <hr></hr>
         <hr></hr>
-        <h3 className='text-xl'>Experience: </h3>
+        <h3 className='text-base md:text-xl'>Experience: </h3>
         <ul className='flex flex-col' data-section='2'>
           <li>Travelpass Group</li>
           <li className='ml-8 italic'>Engineering Intern</li>
@@ -67,7 +67,7 @@ export const AboutModal = ({ onClose }) => {
         </ul>
         <hr></hr>
         <hr></hr>
-        <h3 className='text-xl'>Professional Interests: </h3>
+        <h3 className='text-base md:text-xl'>Professional Interests: </h3>
         <ul>
           <li>Self-teaching</li>
           <li>Self-driven projects</li>
@@ -76,7 +76,7 @@ export const AboutModal = ({ onClose }) => {
         </ul>
         <hr></hr>
         <hr></hr>
-        <h3 className='text-xl'>Hobbies: </h3>
+        <h3 className='text-base md:text-xl'>Hobbies: </h3>
         <ul>
           <li>Music composition</li>
           <li>Piano</li>

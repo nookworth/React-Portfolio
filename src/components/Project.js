@@ -1,5 +1,6 @@
 import React from 'react'
 // import { Github } from "@icons-pack/react-simple-icons";
+import './project.css'
 
 const styles = {
   body: {
@@ -61,23 +62,23 @@ export default function Project({
   // TODO: refactor using TailwindCSS
   return (
     <div
-      className='card col-sm-4 col-xl-3 flex-sm-grow-1 m-2'
-      style={styles.body}
+      className='overflow-hidden h-full w-full flex flex-col card-body'
+      // style={{backgroundImage: `url(${image})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover'}}
     >
-      <p className='card-title' style={styles.title}>
+      {/* <p className='card-title' style={styles.title}>
         {title}
       </p>
-      <em>{subtitle}</em>
-      <a href={link} target='_blank' rel='noreferrer'>
+      <em>{subtitle}</em> */}
+      <a className='h-full hover:shadow-lg' href={link} target='_blank' rel='noreferrer'>
         <img
           src={image}
-          className='card-img-top'
+          className='hover:opacity-40 h-full'
           alt='...'
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}
         ></img>
       </a>
-      <div className='card-text'>
+      {/* <div className='card-text'>
         <ul className='text-center' id='project-card-list'>
           {text &&
             text.map((listItem, index) => <li key={index}>{listItem}</li>)}
@@ -87,7 +88,7 @@ export default function Project({
         <a href={github} className='btn w-50 mx-auto' style={styles.button}>
           Github
         </a>
-      )}
+      )} */}
     </div>
   )
 }
