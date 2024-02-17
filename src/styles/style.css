@@ -16,22 +16,6 @@
   list-style: none;
 }
 
-.nav-link:active {
-  color: #f00c0c;
-}
-
-.nav-link {
-  color: #f1e3d3;
-}
-
-.nav-item {
-  background: #f3f3f4;
-}
-
-a {
-  color: #f00c0c;
-}
-
 .render-page {
   height: 100vh;
 }

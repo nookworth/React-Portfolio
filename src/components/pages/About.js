@@ -58,11 +58,11 @@ export default function About() {
               // width='750'
             ></video>
           </section>
-          <section className='bg-manila flex flex-col lg:flex-row justify-center max-h-[450px] row-span-2 p-2 text-charcoal lg:justify-between'>
+          <section className='bg-manila flex flex-col lg:flex-row justify-center row-span-2 max-h-[450px] p-2 text-charcoal lg:justify-between'>
             <header className='text-center text-2xl m-auto lg:hidden'>
               Project Showcase
             </header>
-            <div className=' lg:h-full lg:w-4/5'>
+            <div className='h-4/5 my-auto lg:w-4/5'>
               <Portfolio />
             </div>
             <header className='m-auto text-xl hidden lg:block lg:text-3xl'>

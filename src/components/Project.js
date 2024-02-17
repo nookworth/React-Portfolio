@@ -77,7 +77,7 @@ export default function Project({
       >
         <img
           src={image}
-          className='hover:opacity-40 h-full max-h-[450px]'
+          className='hover:opacity-40 h-full w-full'
           alt='...'
           onMouseEnter={onMouseEnter}
           onMouseLeave={onMouseLeave}

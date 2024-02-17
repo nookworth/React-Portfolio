@@ -16,58 +16,52 @@ const styles = {
 
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <ul className='h-10 flex flex-column md:flex-row md:justify-evenly md:items-center'>
-      <li className='nav-item'>
+    <div className='h-10 grid grid-cols-4'>
+      <div
+        className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+        data-active={currentPage === 'About' ? 'true' : 'false'}
+      >
         <a
-          href='#about'
+          href='#About'
           onClick={() => handlePageChange('About')}
-          className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
-          style={
-            currentPage === 'About' ? styles.activeTab : styles.inactiveTab
-          }
+          className='w-full h-full'
         >
           About Me
         </a>
-      </li>
-      <li className='nav-item'>
+      </div>
+      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+        data-active={currentPage === 'Contact' ? 'true' : 'false'}>
         <a
           href='#Contact'
           onClick={() => handlePageChange('Contact')}
           className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
-          style={
-            currentPage === 'Contact' ? styles.activeTab : styles.inactiveTab
-          }
         >
           Contact
         </a>
-      </li>
-      <li className='nav-item'>
+      </div>
+      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+        data-active={currentPage === 'Portfolio' ? 'true' : 'false'}>
         <a
           href='#Portfolio'
           onClick={() => handlePageChange('Portfolio')}
           className={
             currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'
           }
-          style={
-            currentPage === 'Portfolio' ? styles.activeTab : styles.inactiveTab
-          }
         >
           Portfolio
         </a>
-      </li>
-      <li className='nav-item'>
+      </div>
+      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+        data-active={currentPage === 'Resume' ? 'true' : 'false'}>
         <a
           href='#Resume'
           onClick={() => handlePageChange('Resume')}
           className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-          style={
-            currentPage === 'Resume' ? styles.activeTab : styles.inactiveTab
-          }
         >
           Resume
         </a>
-      </li>
-    </ul>
+      </div>
+    </div>
   )
 }
 

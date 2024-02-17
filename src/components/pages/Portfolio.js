@@ -4,7 +4,7 @@ import Project from '../Project.js'
 const tapp = {
   title: 'Transcribing App',
   text: ['✅ Solo Developer', '🛠️ JavaScript, Electron, HTML5, CSS3'],
-  image: 'https://i.imgur.com/25I3MFE.jpg',
+  image: 'https://i.imgur.com/XhtQLZi.png',
   link: 'https://imgur.com/a/e2lyLg3',
   subtitle: 'Speech-to-text desktop app',
 }
@@ -12,7 +12,7 @@ const tapp = {
 const quickFlix = {
   title: 'QuickFlix',
   text: ['✅ Scripting and API implementation', '🛠️ JavaScript, REST'],
-  image: 'https://i.imgur.com/YIz9cU3.jpg',
+  image: 'https://i.imgur.com/WXzyLqp.png',
   link: 'https://mich-hales.github.io/QuickFlix/',
   github: 'https://github.com/mich-hales/QuickFlix',
   subtitle: 'A website to randomly select a movie for you.',
@@ -24,7 +24,7 @@ const dndMeetups = {
     '✅ Team lead and primary backend developer',
     '🛠️ HTML, Tailwind, Express, Sequelize',
   ],
-  image: 'https://i.imgur.com/E3ycdtx.jpg',
+  image: 'https://i.imgur.com/oLnEked.png',
   link: 'https://frozen-meadow-34344.herokuapp.com/',
   github: 'https://github.com/DandDMeetups/DnDMeetups',
   subtitle: 'A social media platform for Dungeons and Dragons players.',
@@ -74,7 +74,7 @@ const otherThree = [techBlog, employeeTracker, socialApi]
 // TODO: allow this to take a 'layout' prop to determine whether to display a gallery or a card grid
 export default function Portfolio() {
   return (
-    <div className='flex flex-row gap-3 p-1.5'>
+    <div className='flex flex-row gap-3 h-full p-1.5'>
       <section className='grid grid-cols-5 grid-rows-2 gap-3 max-w-1/2'>
         {topThreeProjects.map(
           ({ title, text, image, link, github, subtitle }, index) => (
