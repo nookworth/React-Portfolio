@@ -5,22 +5,9 @@ import {
   SiStackoverflow,
 } from '@icons-pack/react-simple-icons'
 import { AboutModal } from '../AboutModal'
+import './about.css'
 
 const styles = {
-  image: {
-    borderStyle: 'solid',
-    borderWidth: '1px',
-    borderColor: '#34312D',
-    borderRadius: '5px',
-    margin: 'auto',
-  },
-  about: {
-    borderStyle: 'dotted',
-    borderWidth: '1px',
-    borderColor: '#34312D',
-    borderRadius: '5px',
-    fontFamily: 'Courier New',
-  },
   footer: {
     background: '#34312D',
     color: '#F1E3D3',
@@ -37,36 +24,33 @@ export default function About() {
     <>
       {isModalOpen && <AboutModal onClose={closeModal} />}
       <div className='relative my-8'>
-        <div className='grid grid-rows-3 md:grid-cols-6 md:grid-rows-none'>
-          <div className='col-span-2 py-2 px-4' id='headshot-wrapper'>
+        <div className='grid grid-rows-2 about-grid'>
+          <section className='flex flex-row headshot-bio'>
             <img
               src='https://i.imgur.com/G3gqAWn.jpg'
+              className='pro-headshot'
               alt='pro-headshot'
-              width='150px'
-              style={styles.image}
             />
-          </div>
-
-          <div
-            className='md:col-span-4 inline-flex flex-col m-2 text-center space-y-4 cursor-pointer'
-            style={styles.about}
-            onClick={() => {
-              console.log('clicked', isModalOpen)
-              setIsModalOpen(true)
-            }}
-          >
-            <h2>About Me</h2>
-            <p>
-              I am a frontend/full-stack web developer. My background in music
-              has strengthened my self-teaching muscle and I continue to
-              exercise it in the programming world. I have strengths in
-              JavaScript, HTML, CSS, TailwindCSS, React, Electron, Node, and Elixir,
-              and I am currently studying Ruby in addition.
-            </p>
-            <h1>
-              <em>click for detailed factsheet</em>
-            </h1>
-          </div>
+            <div
+              className='text-xs pt-12 md:text-sm lg:text-base text-center space-y-4 cursor-pointer about-info'
+              style={styles.about}
+              onClick={() => {
+                setIsModalOpen(true)
+              }}
+            >
+              <h2>About Me</h2>
+              <p>
+                I am a frontend/full-stack web developer. My background in music
+                has strengthened my self-teaching muscle and I continue to
+                exercise it in the programming world. I have strengths in
+                JavaScript, HTML, CSS, TailwindCSS, React, Electron, Node, and
+                Elixir, and I am currently studying Ruby in addition.
+              </p>
+              <h1>
+                <em>click for detailed factsheet</em>
+              </h1>
+            </div>
+          </section>
           {/* <div
             className='md:col-span-2 inline-flex flex-col justify-between my-2 text-center'
             style={styles.about}
@@ -97,14 +81,16 @@ export default function About() {
               </a>
             </div>
           </div> */}
+          <section className='bg-eggplant w-full'>
+            <video
+              className='aspect-video ml-auto rounded-md max-h-[450px]'
+              controls
+              src='https://i.imgur.com/JUIXKYy.mp4'
+              // width='750'
+            ></video>
+          </section>
         </div>
       </div>
-      <video
-        className='m-auto rounded-md'
-        controls
-        src='https://i.imgur.com/JUIXKYy.mp4'
-        width='750'
-      ></video>
     </>
   )
 }

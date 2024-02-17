@@ -31,6 +31,7 @@ export const useTypedLetters = ({ format, data }) => {
   const [wordBuilder, setWordBuilder] = useState('')
   const currentItemIndex = useRef(0)
   const iterator = useRef(0)
+  const constructedList = []
 
   useEffect(() => {
     function typeLetters() {
@@ -38,7 +39,7 @@ export const useTypedLetters = ({ format, data }) => {
         iterator.current = 0
         setWordBuilder([])
         setTypedWord('')
-        currentItemIndex.current++
+        constructedList.push(currentItem)
         return
       }
       const currentItemArr = currentItem?.split('')
@@ -52,7 +53,7 @@ export const useTypedLetters = ({ format, data }) => {
     }
 
     currentItem && typeLetters()
-  }, [currentItem, wordBuilder])
+  }, [currentItem, constructedList, wordBuilder])
 
   // Need logic here to decide when to render the typing letters
   // and when to render the entire term from data

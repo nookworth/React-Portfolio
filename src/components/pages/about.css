@@ -1,0 +1,16 @@
+.about-grid {
+  grid-template-rows: minmax(0px, 450px);
+}
+
+.about-info {
+  font-family: Courier New;
+}
+
+.pro-headshot {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #34312d;
+  border-radius: 5px;
+  margin: auto;
+  max-width: 20%;
+}

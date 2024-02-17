@@ -14,7 +14,7 @@ const styles = {
 
 export default function Footer() {
   return (
-    <div className="d-flex justify-content-end fixed-bottom" style={styles.footer}>
+    <div className="flex flex-row justify-center md:justify-end gap-4 sticky bottom-0" style={styles.footer}>
       <a href="https://github.com/nookworth" className="mx-2" style={styles.footer}>
         <SiGithub className="m-2" title="Github" size={24} />
         Github
