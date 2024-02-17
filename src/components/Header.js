@@ -9,7 +9,7 @@ import '../styles/style.css'
 const styles = {
   page: {
     background: '#F1E3D3',
-    // minHeight: "100vh",
+    minHeight: "100vh",
     borderStyle: 'solid',
     borderWidth: '1px',
     borderColor: '#34312D',

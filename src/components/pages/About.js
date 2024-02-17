@@ -9,7 +9,7 @@ export default function About() {
     setIsModalOpen(false)
   }
 
-  // TODO: make navigation tabs, make navbar responsive, fix project showcase scaling, fix Portfolio page, fix Resume page, take better screenshots for project gallery
+  // TODO: fix Portfolio page, fix Resume page, take better screenshots for project gallery
 
   return (
     <>
@@ -62,8 +62,11 @@ export default function About() {
             <header className='text-center text-2xl m-auto lg:hidden'>
               Project Showcase
             </header>
-            <div className='h-4/5 my-auto lg:w-4/5'>
-              <Portfolio />
+            <div className='h-4/5 my-auto md:hidden'>
+              <Portfolio layout='grid' size='small' />
+            </div>
+            <div className='h-4/5 hidden my-auto max-w-[1024px] md:block lg:w-4/5'>
+              <Portfolio layout='gallery' />
             </div>
             <header className='m-auto text-xl hidden lg:block lg:text-3xl'>
               Project Showcase

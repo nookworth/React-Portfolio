@@ -6,6 +6,7 @@ const tapp = {
   text: ['✅ Solo Developer', '🛠️ JavaScript, Electron, HTML5, CSS3'],
   image: 'https://i.imgur.com/XhtQLZi.png',
   link: 'https://imgur.com/a/e2lyLg3',
+  github: '',
   subtitle: 'Speech-to-text desktop app',
 }
 
@@ -60,6 +61,7 @@ const socialApi = {
   subtitle: 'Routes and data models for a hypothetical social network.',
 }
 
+const allProjects = [tapp, quickFlix, dndMeetups, techBlog, employeeTracker, socialApi]
 const topThreeProjects = [tapp, quickFlix, dndMeetups]
 const otherThree = [techBlog, employeeTracker, socialApi]
 
@@ -72,44 +74,71 @@ const otherThree = [techBlog, employeeTracker, socialApi]
 // };
 
 // TODO: allow this to take a 'layout' prop to determine whether to display a gallery or a card grid
-export default function Portfolio() {
+export default function Portfolio({ layout = 'grid', size = 'large' }) {
+  if (layout === 'gallery') {
+    return (
+      <div className='flex flex-row gap-3 h-full p-1.5'>
+        <section className='grid grid-cols-5 grid-rows-2 gap-3 max-w-1/2'>
+          {topThreeProjects.map(
+            ({ title, text, image, link, github, subtitle }, index) => (
+              <div
+                key={index}
+                className='first:order-3 first:col-start-3 first:col-span-3 first:row-start-1 first:row-span-2 even:col-span-2 last:col-span-2'
+              >
+                <Project
+                  title={title}
+                  text={text}
+                  image={image}
+                  layout={layout}
+                  link={link}
+                  github={github}
+                  size={size}
+                  subtitle={subtitle}
+                />
+              </div>
+            )
+          )}
+        </section>
+        <section className='grid grid-cols-2 grid-rows-2 gap-3 max-w-1/2'>
+          {otherThree?.map(
+            ({ title, text, image, link, github, subtitle }, index) => (
+              <div key={index} className='first:col-span-2'>
+                <Project
+                  title={title}
+                  text={text}
+                  image={image}
+                  layout={layout}
+                  link={link}
+                  github={github}
+                  size={size}
+                  subtitle={subtitle}
+                />
+              </div>
+            )
+          )}
+        </section>
+      </div>
+    )
+  }
+
   return (
-    <div className='flex flex-row gap-3 h-full p-1.5'>
-      <section className='grid grid-cols-5 grid-rows-2 gap-3 max-w-1/2'>
-        {topThreeProjects.map(
-          ({ title, text, image, link, github, subtitle }, index) => (
-            <div
-              key={index}
-              className='first:order-3 first:col-start-3 first:col-span-3 first:row-start-1 first:row-span-2 even:col-span-2 last:col-span-2'
-            >
-              <Project
-                title={title}
-                text={text}
-                image={image}
-                link={link}
-                github={github}
-                subtitle={subtitle}
-              />
-            </div>
-          )
-        )}
-      </section>
-      <section className='grid grid-cols-2 grid-rows-2 gap-3 max-w-1/2'>
-        {otherThree?.map(
-          ({ title, text, image, link, github, subtitle }, index) => (
-            <div key={index} className='first:col-span-2'>
-              <Project
-                title={title}
-                text={text}
-                image={image}
-                link={link}
-                github={github}
-                subtitle={subtitle}
-              />
-            </div>
-          )
-        )}
-      </section>
+    <div className='grid grid-cols-2 grid-rows-3 gap-4 p-4 md:grid-cols-3 md:grid-rows-2'>
+      {allProjects.map(
+        ({ title, text, image, link, github, subtitle }, index) => (
+          <div key={index}>
+            <Project
+              title={title}
+              text={text}
+              image={image}
+              layout={layout}
+              link={link}
+              github={github}
+              size={size}
+              subtitle={subtitle}
+            />
+          </div>
+        )
+      )}
     </div>
   )
 }

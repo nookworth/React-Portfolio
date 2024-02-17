@@ -18,7 +18,7 @@ function NavTabs({ currentPage, handlePageChange }) {
   return (
     <div className='h-10 grid grid-cols-4'>
       <div
-        className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+        className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
         data-active={currentPage === 'About' ? 'true' : 'false'}
       >
         <a
@@ -29,7 +29,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           About Me
         </a>
       </div>
-      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
         data-active={currentPage === 'Contact' ? 'true' : 'false'}>
         <a
           href='#Contact'
@@ -39,7 +39,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           Contact
         </a>
       </div>
-      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
         data-active={currentPage === 'Portfolio' ? 'true' : 'false'}>
         <a
           href='#Portfolio'
@@ -51,7 +51,7 @@ function NavTabs({ currentPage, handlePageChange }) {
           Portfolio
         </a>
       </div>
-      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:opacity-80 hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
+      <div className="nav-item py-2 bg-papaya data-[active='true']:bg-manila-dark data-[active='true']:shadow-md data-[active='true']:opacity-100 transition-all hover:cursor-pointer hover:transition-all hover:ease-in text-base text-center text-charcoal  rounded-b-md"
         data-active={currentPage === 'Resume' ? 'true' : 'false'}>
         <a
           href='#Resume'
