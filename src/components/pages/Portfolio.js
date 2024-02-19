@@ -31,15 +31,13 @@ const dndMeetups = {
   subtitle: 'A social media platform for Dungeons and Dragons players.',
 }
 
-const techBlog = {
-  title: 'Tech Blog',
-  text: [
-    '✅ Solo Developer',
-    '🛠️ MVC (Handlebars), Sequelize, Express, Bcrypt',
-  ],
-  image: 'https://i.imgur.com/3z5ZtkE.jpg',
-  github: 'https://github.com/nookworth/tech-blog',
-  subtitle: 'A mockup of a blog website.',
+const countryFactbook = {
+  title: 'Country Factbook',
+  text: ['✅ Solo Developer', '🛠️ React, TypeScript, Apollo GraphQL'],
+  image: 'https://i.imgur.com/YkYMfPA.png',
+  link: 'https://main.d2638hq58c2so8.amplifyapp.com/',
+  github: 'https://github.com/nookworth/countries-challenge-v2',
+  subtitle: 'Search for statistics about any country in the world.',
 }
 
 const employeeTracker = {
@@ -61,9 +59,9 @@ const socialApi = {
   subtitle: 'Routes and data models for a hypothetical social network.',
 }
 
-const allProjects = [tapp, quickFlix, dndMeetups, techBlog, employeeTracker, socialApi]
+const allProjects = [tapp, quickFlix, dndMeetups, countryFactbook, employeeTracker, socialApi]
 const topThreeProjects = [tapp, quickFlix, dndMeetups]
-const otherThree = [techBlog, employeeTracker, socialApi]
+const otherThree = [countryFactbook, employeeTracker, socialApi]
 
 // const eCommerce = {
 //   title: "E-commerce Backend",
