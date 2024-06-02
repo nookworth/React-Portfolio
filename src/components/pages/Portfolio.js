@@ -8,6 +8,7 @@ import {
   SiHeroku,
   SiScreencastify,
 } from '@icons-pack/react-simple-icons'
+import './portfolio.css'
 
 const tapp = {
   title: 'HexType',
@@ -143,23 +144,24 @@ export default function Portfolio({ layout = 'grid', size = 'large' }) {
 
   if (layout === 'grid') {
     return (
-      <div className='grid grid-cols-2 grid-rows-3 gap-4 p-4 md:grid-cols-3 md:grid-rows-2'>
-        {allProjects.map(
-          ({ title, text, image, link, github, subtitle }, index) => (
-            <div key={index}>
-              <Project
-                title={title}
-                text={text}
-                image={image}
-                layout={layout}
-                link={link}
-                github={github}
-                size={size}
-                subtitle={subtitle}
-              />
+      <div className='grid grid-cols-2 gap-4 p-4 md:grid-cols-3 md:grid-rows-2 grid-gallery'>
+        {allProjects.map(({ title, icon, link, subtitle }, index) => (
+          <a
+            key={index}
+            href={link}
+            className='bg-papaya flex flex-col justify-evenly rounded-md text-onyx first:bg-eggplant first:row-span-2 first:text-manila last:bg-papaya [&:nth-last-child(3)]:bg-onyx [&:nth-last-child(3)]:col-span-2 [&:nth-last-child(3)]:row-span-1 [&:nth-last-child(3)]:text-manila group'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <div className='text-center space-y-4 md:py-6 md:group-first:py-20'>
+              {title}
+              <p>
+                <em>{subtitle}</em>
+              </p>
             </div>
-          )
-        )}
+            <div className='h-min w-min m-auto'>{iconComponent(icon)}</div>
+          </a>
+        ))}
       </div>
     )
   }
@@ -168,60 +170,46 @@ export default function Portfolio({ layout = 'grid', size = 'large' }) {
     return (
       <div className='flex flex-row gap-3 md:h-[300px] md:w-[533px] lg:h-[400px] lg:w-[933px] p-1.5'>
         <section className='grid grid-cols-5 grid-rows-2 gap-3 h-full w-1/2'>
-          {topThreeProjects.map(
-            ({ title, text, icon, image, link, github, subtitle }, index) => (
-              <div
-                key={index}
-                className={`bg-papaya rounded-md text-onyx first:bg-eggplant first:order-3 first:col-start-3 first:col-span-3 first:row-start-1 first:row-span-2 first:text-manila even:col-span-2 last:col-span-2 group`}
-              >
-                <div
-                  className={`h-min w-min m-auto py-1/3 group-hover/:hidden`}
-                >
-                  {iconComponent(icon)}
-                </div>
-                <div className='hidden text-center space-y-4 md:py-6 md:group-first:py-20 group-hover:block'>
-                  <a
-                    href={link}
-                    className='underline'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    {title}
-                  </a>
-                  <p>
-                    <em>{subtitle}</em>
-                  </p>
-                </div>
+          {topThreeProjects.map(({ title, icon, link, subtitle }, index) => (
+            <a
+              key={index}
+              href={link}
+              className={`bg-papaya rounded-md text-onyx first:bg-eggplant first:order-3 first:col-start-3 first:col-span-3 first:row-start-1 first:row-span-2 first:text-manila even:col-span-2 last:col-span-2 group`}
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className={`h-min w-min m-auto py-1/3 group-hover/:hidden`}>
+                {iconComponent(icon)}
               </div>
-            )
-          )}
+              <div className='hidden text-center space-y-4 md:py-6 md:group-first:py-20 group-hover:block'>
+                {title}
+                <p>
+                  <em>{subtitle}</em>
+                </p>
+              </div>
+            </a>
+          ))}
         </section>
         <section className='grid grid-cols-2 grid-rows-2 gap-3 h-full w-1/2'>
-          {otherThree?.map(
-            ({ title, text, icon, image, link, github, subtitle }, index) => (
-              <div
-                key={index}
-                className='bg-onyx rounded-md text-manila first:bg-papaya first:col-span-2 first:text-onyx group'
-              >
-                <div className='h-min w-min m-auto py-1/3 group-hover:hidden'>
-                  {iconComponent(icon)}
-                </div>
-                <div className='hidden text-center space-y-4 md:py-6 group-hover:block'>
-                  <a
-                    href={link}
-                    className='underline'
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    {title}
-                  </a>
-                  <p>
-                    <em>{subtitle}</em>
-                  </p>
-                </div>
+          {otherThree?.map(({ title, icon, link, subtitle }, index) => (
+            <a
+              key={index}
+              href={link}
+              className='bg-onyx rounded-md text-manila first:bg-papaya first:col-span-2 first:text-onyx group'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div className='h-min w-min m-auto py-1/3 group-hover:hidden'>
+                {iconComponent(icon)}
               </div>
-            )
-          )}
+              <div className='hidden text-center space-y-4 md:py-6 group-hover:block'>
+                {title}
+                <p>
+                  <em>{subtitle}</em>
+                </p>
+              </div>
+            </a>
+          ))}
         </section>
       </div>
     )
@@ -231,22 +219,22 @@ export default function Portfolio({ layout = 'grid', size = 'large' }) {
 const iconComponent = iconName => {
   switch (iconName) {
     case 'SiAwsamplify': {
-      return <SiAwsamplify className='text-onyx' size={32} />
+      return <SiAwsamplify className='md:text-onyx' size={44} />
     }
     case 'SiElectron': {
-      return <SiElectron className='text-manila' size={32} />
+      return <SiElectron className='text-manila' size={44} />
     }
     case 'SiGithubpages': {
-      return <SiGithubpages className='text-onyx' size={32} />
+      return <SiGithubpages className='text-onyx' size={44} />
     }
     case 'SiGoogledrive': {
-      return <SiGoogledrive className='text-manila' size={32} />
+      return <SiGoogledrive className='md:text-manila' size={44} />
     }
     case 'SiHeroku': {
-      return <SiHeroku className='text-onyx' size={32} />
+      return <SiHeroku className='text-onyx' size={44} />
     }
     case 'SiScreencastify': {
-      return <SiScreencastify className='text-manila' size={32} />
+      return <SiScreencastify className='md:text-manila' size={44} />
     }
     default:
       return <></>

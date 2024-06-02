@@ -9,7 +9,7 @@ import '../styles/style.css'
 const styles = {
   page: {
     background: '#F1E3D3',
-    minHeight: "100vh",
+    minHeight: '100vh',
     borderStyle: 'solid',
     borderWidth: '1px',
     borderColor: '#34312D',
@@ -37,7 +37,7 @@ export default function Header() {
 
   return (
     <div>
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      {/* <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} /> */}
       <div className='px-md-5' style={styles.page}>
         {renderPage()}
       </div>

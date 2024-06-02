@@ -1,4 +1,4 @@
-const fullName = 'Christopher H. Morrison'
+const FULL_NAME = 'Christopher H. Morrison'
 
 export const AboutModal = ({ onClose }) => {
   return (
@@ -7,7 +7,9 @@ export const AboutModal = ({ onClose }) => {
       id='about-modal'
     >
       <section className='flex flex-row justify-center'>
-        <h2 className='mt-4 text-xl md:text-3xl underline'>Developer Factsheet</h2>
+        <h2 className='mt-4 text-xl md:text-3xl underline'>
+          Developer Factsheet
+        </h2>
         <button
           className='absolute right-2 top-1 hover:underline'
           onClick={() => onClose()}
@@ -17,7 +19,7 @@ export const AboutModal = ({ onClose }) => {
       </section>
       <section className='grid grid-cols-2 space-y-2'>
         <h3 className='text-base md:text-xl'>Name: </h3>
-        <p data-section='0'>{fullName}</p>
+        <p data-section='0'>{FULL_NAME}</p>
         <hr></hr>
         <hr></hr>
         <h3 className='text-base md:text-xl'>Education: </h3>
@@ -36,7 +38,7 @@ export const AboutModal = ({ onClose }) => {
         <h3 className='text-base md:text-xl'>Experience: </h3>
         <ul className='flex flex-col' data-section='2'>
           <li>Travelpass Group</li>
-          <li className='ml-8 italic'>Engineering Intern</li>
+          <li className='ml-8 italic'>Junior Software Engineer</li>
           <li>Utah Valley University</li>
           <li className='ml-8 italic'>TypeWell Transcriber</li>
           <li>Morrison Piano Studio</li>

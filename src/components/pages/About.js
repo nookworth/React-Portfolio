@@ -15,8 +15,8 @@ export default function About() {
     <>
       {isModalOpen && <AboutModal onClose={closeModal} />}
       <div className='relative'>
-        <div className='grid grid-rows-5 mt-2 space-y-2 about-grid'>
-          <section className='flex flex-row items-center gap-2 px-2 max-h-[300px] row-span-1 relative group/bio headshot-bio'>
+        <div className=' mt-2 about-grid md:grid md:grid-rows-4'>
+          <section className='flex flex-row items-center gap-2 px-2 mb-2 max-h-[300px] row-span-1 relative group/bio headshot-bio'>
             <img
               src='https://i.imgur.com/G3gqAWn.jpg'
               className='pro-headshot h-[300px]'
@@ -47,8 +47,8 @@ export default function About() {
               </h1>
             </div>
           </section>
-          <section className='flex flex-col items-center row-span-1 max-h-[300px] p-2 lg:flex-row lg:justify-between bg-eggplant w-full'>
-            <header className='text-manila text-center text-2xl my-auto lg:hidden'>
+          <section className='flex flex-col items-center row-span-1 px-2 py-4 space-y-2 bg-eggplant w-full md:max-h-[300px] lg:flex-row lg:justify-between'>
+            <header className='text-manila text-center text-2xl my-auto grow lg:hidden'>
               Project Highlight: HexType
             </header>
             <header className='text-manila text-center mx-auto hidden justify-self-center lg:block lg:text-3xl'>
@@ -61,9 +61,9 @@ export default function About() {
               // width='750'
             ></video>
           </section>
-          <section className='bg-manila flex flex-col md:flex-row justify-center row-span-2 p-2 w-full text-charcoal md:justify-between'>
+          <section className='bg-manila h-full flex flex-col justify-center p-2 w-full text-charcoal md:flex-row md:justify-between md:row-span-2'>
             <header className='text-center text-2xl m-auto md:hidden'>
-              Project Showcase
+              Portfolio
             </header>
             <div className='h-4/5 my-auto md:hidden'>
               <Portfolio layout='grid' size='small' />
@@ -72,7 +72,7 @@ export default function About() {
               <Portfolio layout='simpleGallery' />
             </div>
             <header className='m-auto text-xl hidden md:block md:text-3xl'>
-              Project Showcase
+              Portfolio
             </header>
           </section>
         </div>

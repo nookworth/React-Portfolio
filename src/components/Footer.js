@@ -16,7 +16,7 @@ const styles = {
 export default function Footer() {
   return (
     <div
-      className='bg-charcoal flex flex-row justify-center gap-2 fixed bottom-0 w-full md:justify-end md:gap-4'
+      className='bg-charcoal flex flex-row justify-center gap-2 sticky bottom-0 w-full md:justify-end md:gap-4'
       style={styles.footer}
     >
       <a
