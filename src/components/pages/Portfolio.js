@@ -64,26 +64,24 @@ const employeeTracker = {
     'A command-line interface allowing you to manage a database of employees.',
 }
 
-const socialApi = {
-  title: 'Social Network API',
-  text: ['✅ Solo Developer', '🛠️ Express, Mongoose, Bcrypt'],
-  icon: 'SiScreencastify',
-  image: 'https://i.imgur.com/4k76hhB.jpg',
-  link: 'https://watch.screencastify.com/v/Bhqa1VF7p508EZHdYWhb',
-  github: 'https://github.com/nookworth/social-network-api',
-  subtitle: 'Routes and data models for a hypothetical social network.',
+const portal = {
+  title: 'TPG Developer Portal',
+  icon: 'SiElectron',
+  link: 'https://github.com/nookworth/tpg-dev-portal',
+  subtitle:
+    'Open-source desktop productivity app for Travelpass frontend developers',
 }
 
 const allProjects = [
   tapp,
   quickFlix,
   dndMeetups,
+  portal,
   countryFactbook,
   employeeTracker,
-  socialApi,
 ]
 const topThreeProjects = [tapp, quickFlix, dndMeetups]
-const otherThree = [countryFactbook, employeeTracker, socialApi]
+const otherThree = [portal, countryFactbook, employeeTracker]
 
 // const eCommerce = {
 //   title: "E-commerce Backend",
@@ -92,6 +90,16 @@ const otherThree = [countryFactbook, employeeTracker, socialApi]
 //   link: "https://drive.google.com/file/d/1gFjjX9-vBiM0ZEB6FBLv1t4LnjpKy-tw/view",
 //   github: "https://github.com/nookworth/e-commerce-back-end",
 // };
+
+// const socialApi = {
+//   title: 'Social Network API',
+//   text: ['✅ Solo Developer', '🛠️ Express, Mongoose, Bcrypt'],
+//   icon: 'SiScreencastify',
+//   image: 'https://i.imgur.com/4k76hhB.jpg',
+//   link: 'https://watch.screencastify.com/v/Bhqa1VF7p508EZHdYWhb',
+//   github: 'https://github.com/nookworth/social-network-api',
+//   subtitle: 'Routes and data models for a hypothetical social network.',
+// }
 
 // TODO: allow this to take a 'layout' prop to determine whether to display a gallery or a card grid
 export default function Portfolio({ layout = 'grid', size = 'large' }) {
@@ -174,7 +182,7 @@ export default function Portfolio({ layout = 'grid', size = 'large' }) {
             <a
               key={index}
               href={link}
-              className={`bg-papaya rounded-md text-onyx first:bg-eggplant first:order-3 first:col-start-3 first:col-span-3 first:row-start-1 first:row-span-2 first:text-manila even:col-span-2 last:col-span-2 group`}
+              className={`bg-papaya rounded-md px-2 text-onyx first:bg-eggplant first:order-3 first:col-start-3 first:col-span-3 first:row-start-1 first:row-span-2 first:text-manila even:col-span-2 last:col-span-2 group`}
               target='_blank'
               rel='noreferrer'
             >
@@ -195,11 +203,11 @@ export default function Portfolio({ layout = 'grid', size = 'large' }) {
             <a
               key={index}
               href={link}
-              className='bg-onyx rounded-md text-manila first:bg-papaya first:col-span-2 first:text-onyx group'
+              className='bg-papaya flex flex-col justify-center px-2 rounded-md text-onyx first:bg-onyx first:col-span-2 first:text-manila group'
               target='_blank'
               rel='noreferrer'
             >
-              <div className='h-min w-min m-auto py-1/3 group-hover:hidden'>
+              <div className='h-min w-min m-auto group-hover:hidden'>
                 {iconComponent(icon)}
               </div>
               <div className='hidden text-center space-y-4 md:py-6 group-hover:block'>
@@ -228,7 +236,7 @@ const iconComponent = iconName => {
       return <SiGithubpages className='text-onyx' size={44} />
     }
     case 'SiGoogledrive': {
-      return <SiGoogledrive className='md:text-manila' size={44} />
+      return <SiGoogledrive className='text-onyx' size={44} />
     }
     case 'SiHeroku': {
       return <SiHeroku className='text-onyx' size={44} />

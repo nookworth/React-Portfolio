@@ -9,8 +9,6 @@ export default function About() {
     setIsModalOpen(false)
   }
 
-  // TODO: fix Portfolio page, fix Resume page, take better screenshots for project gallery
-
   return (
     <>
       {isModalOpen && <AboutModal onClose={closeModal} />}
