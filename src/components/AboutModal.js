@@ -3,7 +3,7 @@ const FULL_NAME = 'Christopher H. Morrison'
 export const AboutModal = ({ onClose }) => {
   return (
     <div
-      className='bg-manila-dark fixed bottom-0 w-full md:w-2/3 text-white rounded-lg shadow-lg space-y-4 px-4 overflow-scroll overscroll-contain'
+      className='bg-manilaDark fixed bottom-0 w-full md:w-2/3 text-white rounded-lg shadow-lg space-y-4 px-4 overflow-scroll overscroll-contain'
       id='about-modal'
     >
       <section className='flex flex-row justify-center'>

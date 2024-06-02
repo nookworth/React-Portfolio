@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { AboutModal } from '../AboutModal'
 import Portfolio from './Portfolio'
+import { WordCyclingHeader } from '../WordCyclingHeader'
 import './about.css'
 
 export default function About() {
@@ -26,23 +27,7 @@ export default function About() {
                 setIsModalOpen(true)
               }}
             >
-              <h2 className='text-2xl lg:text-3xl text-charcoal'>
-                Christopher Morrison<br></br>Software Engineer<br></br>
-                <p className='text-base lg:text-xl'>
-                  <em>click for detailed factsheet</em>
-                </p>
-              </h2>
-              <p className='hidden text-charcoal'>
-                I am a frontend software engineer with full-stack aspirations.
-                My background in music has strengthened my self-teaching muscle
-                and I continue to exercise it in the programming world. I am
-                skilled in JavaScript, HTML, CSS, TailwindCSS, React, Electron,
-                Node, and Elixir, and I am always interested in learning new
-                technologies.
-              </p>
-              <h1 className='hidden text-charcoal'>
-                <em>click for detailed factsheet</em>
-              </h1>
+              <WordCyclingHeader />
             </div>
           </section>
           <section className='flex flex-col items-center row-span-1 px-2 py-4 space-y-2 bg-eggplant w-full md:max-h-[300px] lg:flex-row lg:justify-between'>
