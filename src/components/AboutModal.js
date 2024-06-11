@@ -1,5 +1,3 @@
-const FULL_NAME = 'Christopher H. Morrison'
-
 export const AboutModal = ({ onClose }) => {
   return (
     <div
@@ -18,10 +16,6 @@ export const AboutModal = ({ onClose }) => {
         </button>
       </section>
       <section className='grid grid-cols-2 space-y-2'>
-        <h3 className='text-base md:text-xl'>Name: </h3>
-        <p data-section='0'>{FULL_NAME}</p>
-        <hr></hr>
-        <hr></hr>
         <h3 className='text-base md:text-xl'>Education: </h3>
         <ul className='flex flex-col' data-section='1'>
           <li>University of Utah</li>

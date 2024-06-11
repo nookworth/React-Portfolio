@@ -3,13 +3,13 @@ import { useTypedWords } from '../hooks/useTypedWords'
 import './wordCyclingHeader.css'
 
 const LETTER_INTERVAL = 75
-const WORDS = ['Software Engineer', 'Leader', 'Creative', 'Problem Solver']
+const WORDS = ['Software Engineer', 'Problem Solver', 'Leader', 'Creative']
 
 export const WordCyclingHeader = () => {
   const iterator = useRef(0)
   const word = useRef(WORDS[0])
   const [hasWordCompleted, setHasWordCompleted] = useState(false)
-  const typeDuration = word.current.length * LETTER_INTERVAL
+  // const typeDuration = word.current.length * LETTER_INTERVAL
 
   useEffect(() => {
     if (hasWordCompleted) {
@@ -39,7 +39,7 @@ export const WordCyclingHeader = () => {
   return (
     <>
       <h1 className='text-2xl lg:text-3xl' id='header-name'>
-        Christopher Morrison,
+        Christopher Morrison
       </h1>
       <h1 className='text-2xl lg:text-3xl' id={headerRoleId}>
         {typedWord}
